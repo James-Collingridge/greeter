@@ -1,5 +1,11 @@
-name = input("Enter your name: ")
-sanitized_name = name[0].upper() + name[1:].lower()
+while True:
+    try:
+        name = input("Enter your name: ")
+        sanitized_name = name[0].upper() + name[1:].lower()
+        break
+    except IndexError:
+        print("Error: Name must be at least 1 character long.")
+
 vowel = ['A', 'E', 'I', 'O', 'U']
 
 print("Hello " + sanitized_name + "!")
